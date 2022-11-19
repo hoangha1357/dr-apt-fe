@@ -10,6 +10,7 @@ import {
   //Redirect, 
   createBrowserRouter, 
   RouterProvider} from "react-router-dom";
+import {NotificationContainer} from 'react-notifications';
 import routes from './routes';
 // import reportWebVitals from './reportWebVitals';
 const router = createBrowserRouter(routes);
@@ -17,6 +18,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Provider store={store}>
       <RouterProvider router={router} />
+      <NotificationContainer />
     </Provider>
 );
 
