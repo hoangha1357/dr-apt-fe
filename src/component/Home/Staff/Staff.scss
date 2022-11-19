@@ -1,0 +1,18 @@
+.List__Staff {
+    padding: 0 3rem 0 3rem;
+    margin-bottom: 8rem;
+    margin-top: 8rem;
+    .List__title { 
+       display: flex; 
+       justify-content: space-between;
+    }
+    .Container__staff{
+        display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0.4rem;
+    }
+}
