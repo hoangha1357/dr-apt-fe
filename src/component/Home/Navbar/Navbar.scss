@@ -3,7 +3,6 @@
   display: flex;
   justify-content: space-between;
   .n-left {
-    flex: 1;
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -12,19 +11,17 @@
       font-weight: bold;
     }
   }
-  .n-right {
+  .n-mid {
     display: flex;
-    flex: 1;
+   
     justify-content: center;
     align-items: center;
-    font-weight: 400;
+    font-weight: 600;
     .n-list {
-      flex: 10;
       ul {
         display: flex;
-        justify-content: flex-end;
         gap: 2rem;
-        margin-right: 2rem;
+        margin-bottom: 0rem;
         list-style-type: none;
         li:hover {
           cursor: pointer;
@@ -32,8 +29,11 @@
         }
       }
     }
-    .n-button {
-      flex: 2;
-    }
+  }
+  .n-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
   }
 }
