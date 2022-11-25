@@ -1,0 +1,17 @@
+.header{
+    height: 70px;
+    /* background-color: */
+}
+
+.header >* {
+    height: 100%;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-nav > * {
+    height: 100%;
+}

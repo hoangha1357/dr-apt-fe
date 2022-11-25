@@ -2,7 +2,9 @@ import HomePage from './component/Home';
 import Page from './component/Page1';
 import NotFound from './component/NotFound';
 import Sidebar from './layouts/SideBar'
+import UserInfo from './pages/UserInfo';
 import Login from './pages/Login';
+
 const routes = [
     {
         path: "/",
@@ -24,6 +26,12 @@ const routes = [
     {
         path: "/login",
         element: <Login />
-    }
+    },
+    {
+        path: "/user-profile",
+        element: <UserInfo />
+
+    },
+    
 ]
 export default routes;

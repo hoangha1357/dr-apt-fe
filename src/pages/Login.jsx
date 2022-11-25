@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
-import Header from "../component/Header";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import logo from "./../assets/img/logo.png";
+import { createNotification } from "./../utils/Notification";
 function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [success, setSuccess] = useState(false);
+    const navigate = useNavigate();
     const handleLogin = (e) => {
         e.preventDefault();
         const data = {
@@ -25,10 +27,17 @@ function Login() {
                 return res.json();
             })
             .then((data) => {
+                if (data?.message === "Fail") {
+                    createNotification("error", "Sai thông tin tài khoản hoặc mật khẩu");
+                    return;
+                }
+                createNotification("success", "Đăng nhập thành công");
+                // TODO: put to redux
                 console.log(data);
+                navigate('/');
             })
             .catch((err) => {
-                console.error("Error: " + err);
+                createNotification("error", "Đăng nhập thất bại");
             });
     };
 
@@ -46,7 +55,7 @@ function Login() {
                         <form action="#" className="form" onSubmit={handleLogin}>
                             <div className="form-inner">
                                 <div className="welcome">
-                                    <h1 className="text">TMS</h1>
+                                    <h1 className="text">Online Booking</h1>
                                 </div>
                                 <div className="form-group">
                                     <input
