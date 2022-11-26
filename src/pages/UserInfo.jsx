@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 import Header from "../component/Header";
 import "./../assets/css/userinfo.css";
@@ -14,10 +14,12 @@ import ProfileEditable from "../component/ProfileEditable";
 import patient_avt from "./../assets/img/patient-avt.jpg";
 import doctor_avt from "./../assets/img/handdrawn_vector_61.jpg";
 import { BsGeoAltFill } from "react-icons/bs";
+import {getAllAppointments} from './../redux/userSlice'
+import {useDispatch} from 'react-redux'
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
-
+    
     return (
         <div
             role="tabpanel"
@@ -68,13 +70,16 @@ const StyledTab = styled((props) => <Tab disableRipple {...props} />)(({ theme }
 }));
 
 const UserInfo = () => {
+    const dispatch = useDispatch();
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
 
-    
+    useEffect(() => {
+        dispatch(getAllAppointments("hehe"))
+    }, [])
 
     function a11yProps(index) {
         return {
