@@ -27,8 +27,7 @@ const Intro = () => {
         <div className="box-button">
           <button className="button i-button">Say Hi</button>
           <button className="button-Opposition i-button">
-            Discovery my works
-            {/* <HiArrowDown /> */}
+            Discovery our services
           </button>
         </div>
       </div>
