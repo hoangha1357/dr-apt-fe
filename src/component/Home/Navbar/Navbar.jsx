@@ -8,6 +8,7 @@ import Noti from './Noti/Noti.jsx'
 import Search from './Search/Search.jsx'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+import '../../Home/home.css'
 const Navbar = () => {
     const [buttonNoti, setButtonNoti] = useState(false)
     const [buttonSearch, setButtonSearch] = useState(false)
@@ -25,6 +26,7 @@ const Navbar = () => {
         localStorage.removeItem('refreshToken')
         navigate('/login')
     }
+
     return (
         <div className="n-wrapper">
             <div className="n-left">
@@ -37,9 +39,9 @@ const Navbar = () => {
                         <li>
                             <Link to="/">Home</Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link to="/user-profile">Patient</Link>
-                        </li>
+                        </li> */}
                         <li>
                             <Link to="/">Home</Link>
                         </li>
@@ -52,7 +54,7 @@ const Navbar = () => {
             <div className="n-right">
                 <box-icon onClick={() => handleSearch(buttonSearch)} name="search"></box-icon>
                 <box-icon onClick={() => handleNoti(buttonNoti)} name="bell"></box-icon>
-                <box-icon name="user"></box-icon>
+                <box-icon name="user" onClick={() => {navigate('/user-profile')}}></box-icon>
                 <button className="btn btn-primary" onClick={(e) => handleLogout(e)}>Logout</button>
             </div>
             <Noti trigger={buttonNoti}></Noti>

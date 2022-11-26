@@ -28,21 +28,21 @@ const Services = () => {
         <div style={{ left: "3rem", top: "12rem" }}>
           <Card
             emoji={HeartEmoji}
-            heading={"Booking"}
+            heading={"Doctor"}
             detail={"............................."}
           />
         </div>
         <div style={{ left: "19rem", top: "14rem" }}>
           <Card
             emoji={HeartEmoji}
-            heading={"Booking"}
+            heading={"Patient"}
             detail={"............................."}
           />
         </div>
         <div style={{ left: "26rem", top: "-2rem" }}>
           <Card
             emoji={HeartEmoji}
-            heading={"Booking"}
+            heading={"Feedback"}
             detail={"............................."}
           />
         </div>

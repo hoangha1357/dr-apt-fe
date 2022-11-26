@@ -35,9 +35,13 @@ function Login() {
                     createNotification('error', 'Sai thông tin tài khoản hoặc mật khẩu')
                     return
                 }
-                createNotification('success', 'Đăng nhập thành công')
                 // TODO: put to redux
                 console.log(data)
+                if (data?.status === 401) {
+                    createNotification('error', 'Sai thông tin tài khoản hoặc mật khẩu')
+                    return
+                }
+                createNotification('success', 'Đăng nhập thành công')
                 localStorage.setItem('accessToken', JSON.stringify(data?.accessToken))
                 localStorage.setItem('refreshToken', JSON.stringify(data?.refreshToken))
                 dispatch(loginSuccess())

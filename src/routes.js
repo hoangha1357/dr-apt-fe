@@ -39,7 +39,7 @@ const routes = [
         element: <Signup />,
     },
     {
-        path: 'appointment',
+        path: '/appointment',
         element: <Appointment />,
     },
 ]

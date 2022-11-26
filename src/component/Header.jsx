@@ -14,7 +14,7 @@ function Header(props) {
                     <Col lg={3}>Logo</Col>
                     <Col lg={6} className="header-nav">
                         <Link to={"/"}>Home</Link>
-                        <Link to={"/doctor"}>Doctor</Link>
+                        <Link to={"/appointment"}>Appointment</Link>
                         <Link to={"/patient"}>Patient</Link>
                         <Link to={"/user-profile"}>User Profile</Link>
                     </Col>
