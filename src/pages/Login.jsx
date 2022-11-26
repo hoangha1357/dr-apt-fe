@@ -14,12 +14,12 @@ function Login() {
             username,
             password,
         };
-        fetch("http://192.168.43.46:3000/login", {
+        fetch("https://doctor-apt-service.herokuapp.com/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            mode: "cors",
+            // mode: "cors",
             body: JSON.stringify(data),
         })
             .then((res) => {

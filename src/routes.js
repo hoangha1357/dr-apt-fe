@@ -1,4 +1,4 @@
-import HomePage from './component/Home'
+import HomePage from './pages/Home'
 import Page from './component/Page1'
 import NotFound from './component/NotFound'
 import Sidebar from './layouts/SideBar'
