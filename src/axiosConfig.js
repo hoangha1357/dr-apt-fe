@@ -1,8 +1,8 @@
 import axios from 'axios'
 import jwt_decode from 'jwt-decode'
-import authService from './services/authService'
+// import authService from './services/authService'
 const instance = axios.create({
-    baseURL: 'http://192.168.43.46:3000',
+    baseURL: 'https://doctor-apt-service.herokuapp.com',
     timeout: 3000,
     headers: {
         contentType: 'application/json',
@@ -33,14 +33,14 @@ instance.interceptors.request.use(
             console.log('jwt het han')
             const refreshToken = JSON.parse(localStorage.getItem('refreshToken'))
             console.log('refresh token: ' + refreshToken)
-            const response = await authService.refreshToken(refreshToken)
-            console.log(response)
-            if (response.success) {
-                localStorage.setItem('accessToken', JSON.stringify(response?.accessToken))
-                localStorage.setItem('refreshToken', JSON.stringify(response?.refreshToken))
-                config.headers.Authorization = `Bearer ${response?.accessToken}`
-                return config
-            }
+            // const response = await authService.refreshToken(refreshToken)
+            // console.log(response)
+            // if (response.success) {
+            //     localStorage.setItem('accessToken', JSON.stringify(response?.accessToken))
+            //     localStorage.setItem('refreshToken', JSON.stringify(response?.refreshToken))
+            //     config.headers.Authorization = `Bearer ${response?.accessToken}`
+            //     return config
+            // }
         }
         return config
     },

@@ -1,45 +1,52 @@
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import "./Login.css";
-import logo from "./../assets/img/logo.png";
-import { createNotification } from "./../utils/Notification";
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import './Login.css'
+import logo from './../assets/img/logo.png'
+import { createNotification } from './../utils/Notification'
+import { loginSuccess } from './../redux/userSlice'
+import { Link } from 'react-router-dom'
 function Login() {
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
-    const [success, setSuccess] = useState(false);
-    const navigate = useNavigate();
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
+    const [success, setSuccess] = useState(false)
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
     const handleLogin = (e) => {
-        e.preventDefault();
+        e.preventDefault()
         const data = {
             username,
             password,
-        };
-        fetch("https://doctor-apt-service.herokuapp.com/login", {
-            method: "POST",
+        }
+        fetch('https://doctor-apt-service.herokuapp.com/login', {
+            method: 'POST',
             headers: {
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json',
             },
             // mode: "cors",
             body: JSON.stringify(data),
         })
             .then((res) => {
-                console.log(res);
-                return res.json();
+                console.log(res)
+                return res.json()
             })
             .then((data) => {
-                if (data?.message === "Fail") {
-                    createNotification("error", "Sai thông tin tài khoản hoặc mật khẩu");
-                    return;
+                if (data?.message === 'Fail') {
+                    createNotification('error', 'Sai thông tin tài khoản hoặc mật khẩu')
+                    return
                 }
-                createNotification("success", "Đăng nhập thành công");
+                createNotification('success', 'Đăng nhập thành công')
                 // TODO: put to redux
-                console.log(data);
-                navigate('/');
+                console.log(data)
+                localStorage.setItem('accessToken', JSON.stringify(data?.accessToken))
+                localStorage.setItem('refreshToken', JSON.stringify(data?.refreshToken))
+                dispatch(loginSuccess())
+                navigate('/')
             })
             .catch((err) => {
-                createNotification("error", "Đăng nhập thất bại");
-            });
-    };
+                createNotification('error', 'Đăng nhập thất bại')
+            })
+    }
 
     return (
         <div className="login-container">
@@ -93,6 +100,9 @@ function Login() {
                             <button className="submit-btn" onClick={handleLogin}>
                                 LOGIN
                             </button>
+                            <div className="register text-center mt-4">
+                                <Link to="/signup">Register</Link>
+                            </div>
                             <div className="forgot-active">
                                 <a href="#">Forgot password?</a>
                             </div>
@@ -101,7 +111,7 @@ function Login() {
                 </div>
             </div>
         </div>
-    );
+    )
 }
 
-export default Login;
+export default Login
