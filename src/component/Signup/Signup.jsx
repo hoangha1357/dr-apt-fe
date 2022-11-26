@@ -216,7 +216,7 @@ const Signup = () => {
         "password": pwd
       }
 
-      fetch('http://192.168.43.46:3000/resgister', {
+      fetch('https://doctor-apt-service.herokuapp.com/register', {
         method: 'POST', // or 'PUT'
         headers: {
           'Content-Type': 'application/json',
