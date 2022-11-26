@@ -39,6 +39,7 @@ const Navbar = () => {
           name="search"
         ></box-icon>
         <box-icon onClick={() => handleNoti(buttonNoti)} name="bell"></box-icon>
+        <box-icon name="user"></box-icon>
       </div>
       <Noti trigger={buttonNoti}></Noti>
       <Search trigger={buttonSearch}></Search>
