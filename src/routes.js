@@ -5,6 +5,7 @@ import Sidebar from './layouts/SideBar'
 import UserInfo from './pages/UserInfo'
 import Login from './pages/Login'
 import Signup from './component/Signup/Signup'
+import Appointment from './component/Appointment/Appointment'
 
 const routes = [
     {
@@ -36,6 +37,10 @@ const routes = [
     {
         path: 'signup',
         element: <Signup />,
+    },
+    {
+        path: 'appointment',
+        element: <Appointment />,
     },
 ]
 export default routes
