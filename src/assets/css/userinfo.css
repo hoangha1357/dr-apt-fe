@@ -1,0 +1,169 @@
+.user-profile {
+    font-size: 15px;
+    max-width: 100%;
+}
+.breadcum {
+    padding: 15px 0;
+    padding-right: 40px;
+    padding-left: 40px;
+    background-color: #15558d;
+}
+
+.white-color {
+    color: #fff !important;
+}
+
+.user-info {
+    padding-right: 70px;
+    padding-left: 70px;
+}
+
+.breadcrumb-item > a {
+    color: #fff;
+}
+.breadcum h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+.profile-left {
+}
+
+.profile-container {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.patient-avt {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.patient-avt img {
+    width: 100%;
+    border-radius: 50%;
+    height: 100%;
+}
+
+.breadcrumb {
+    margin-bottom: 0;
+}
+
+.patient-loaction {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.text-semibold {
+    font-weight: 600;
+}
+
+.last-booking {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 5px;
+}
+.color-gray {
+    color: #757575;
+}
+
+.last-booking-item-avt {
+    width: 50px;
+    height: 50px;
+}
+
+.last-booking-item-avt img {
+    border-radius: 50%;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.last-booking h2,
+.last-booking-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.MuiButtonBase-root > * {
+    font-size: 15px;
+}
+.MuiTab-root {
+    font-size: 15px !important;
+    /* color: #85C0F3 !important; */
+}
+
+.MuiTablePagination-root {
+    font-size: 15px;
+}
+
+.MuiTablePagination-selectLabel {
+    font-size: 15px !important;
+}
+
+.MuiTablePagination-displayedRows {
+    font-size: 15px !important;
+}
+
+.status {
+    display: inline-block;
+    padding: 3px 6px;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 5px;
+    margin: 0 auto;
+    font-weight: 600;
+}
+
+.status-success {
+    background-color: rgba(15, 183, 107, 0.12) !important;
+    color: #26af48 !important;
+}
+
+.status-cancel {
+    background-color: rgba(242, 17, 54, 0.12) !important;
+    color: #e63c3c !important;
+}
+.status-pending {
+    background-color: rgba(255, 152, 0, 0.12) !important;
+    color: #f39c12 !important;
+}
+
+.MuiTableCell-root {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.form-inputtext {
+    border: 1px solid #e9ecef;
+    font-size: 14px;
+    line-height: 26px;
+    border-radius: 6px;
+    color: #212529 !important;
+    text-align: left;
+    /* height: 40px; */
+    width: 100%;
+    padding: 10px 15px;
+    outline: none;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.form-inputtext:focus {
+    border-color: #396cf0;
+}
+.profile_edit {
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.btn-primary {
+    background-color: #15558D;
+    font-size: 15px;
+    padding: 10px 25px;
+    border-radius: 6px;
+}
